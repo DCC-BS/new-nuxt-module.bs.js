@@ -1,0 +1,25 @@
+{
+    "name": "@dcc-bs/new-nuxt-module.bs.js",
+    "bin": {
+        "your-command-name": "./dist/bin.js"
+    },
+    "devDependencies": {
+        "@types/bun": "latest",
+        "@types/fs-extra": "^11.0.4",
+        "@types/node": "^22.13.4",
+        "fs-extra": "^11.3.0",
+        "ts-node": "^10.9.2",
+        "tsup": "^8.3.6"
+    },
+    "peerDependencies": {
+        "typescript": "^5.7.3"
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsup src/bin.ts --format cjs --dts",
+        "setup": "ts-node src/bin.ts",
+        "prepublishOnly": "npm run build"
+    }
+}
