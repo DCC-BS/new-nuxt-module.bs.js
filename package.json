@@ -25,5 +25,5 @@
         "release": "bun run build && changelogen --release && git push --follow-tags",
         "prepublishOnly": "npm run build"
     },
-    "version": "0.0.1"
+    "version": "0.0.2"
 }
