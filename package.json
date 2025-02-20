@@ -7,7 +7,9 @@
         "@types/bun": "latest",
         "@types/fs-extra": "^11.0.4",
         "@types/node": "^22.13.4",
+        "changelogen": "^0.5.7",
         "fs-extra": "^11.3.0",
+        "publish-to-git": "^1.2.0",
         "ts-node": "^10.9.2",
         "tsup": "^8.3.6"
     },
@@ -20,6 +22,7 @@
     "scripts": {
         "build": "tsup src/bin.ts --format cjs --dts",
         "setup": "ts-node src/bin.ts",
+        "release": "bun run build && changelogen --release && git push --follow-tags",
         "prepublishOnly": "npm run build"
     }
 }
