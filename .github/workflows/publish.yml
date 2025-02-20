@@ -21,8 +21,7 @@ jobs:
       - name: Install Bun
         run: npm install -g bun
       - run: bun install
-      - run: bun generate
-      - run: bun test
+      - run: bun run build
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
