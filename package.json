@@ -1,7 +1,7 @@
 {
     "name": "@dcc-bs/new-nuxt-module.bs.js",
     "bin": {
-        "your-command-name": "./dist/bin.js"
+        "new-nuxt-module": "./dist/bin.js"
     },
     "devDependencies": {
         "@types/bun": "latest",
